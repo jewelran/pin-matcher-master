@@ -125,10 +125,7 @@ color: #E0B612;
 #incurretNotify,#curretNotify{
     display: none;
 }
-#container{
-    display: none;
 
-}
 #container h3{
     color: black;
     font-size: 30px;
