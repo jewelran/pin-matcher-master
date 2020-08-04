@@ -94,7 +94,8 @@
                  document.getElementById("correctNotify").style.backgroundColor  = "green"
                  document.getElementById("correctNotify").style.fontSize  = "15px"
                  document.getElementById("correctNotify").style.color  = "white"
-                document.getElementById("warning").style.color  = "blue"
+                 document.getElementById("warning").style.display  = "block"
+                 document.getElementById("warning").style.display  = "none"
 
                 //empty  string --------------
                  var randomNum = document.getElementById("randomPinInput").value= ""
@@ -110,6 +111,7 @@
                 document.getElementById("incorrectNotify").style.backgroundColor  = "#141452"
 
                 document.getElementById("warning").style.color  = "red"
+                document.getElementById("warning").style.display  = "block"
 
                 //for empty string-----------
                 var randomNum = document.getElementById("randomPinInput").value= ""
@@ -117,6 +119,7 @@
                 //display none of correct  notification---------
                 var curretNotify = document.getElementById("correctNotify");
                 curretNotify.style.display = "none"
+               
             };
             
          });

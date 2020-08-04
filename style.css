@@ -110,6 +110,7 @@ color: #E0B612;
 .action-left{
     color: blue;
     font-size: 15px;
+    display: none;
 }
 .fabicon{
     font-size: 20px;
@@ -131,4 +132,7 @@ color: #E0B612;
     font-size: 30px;
     text-align: center;
     margin-top: 20%;
+}
+#warning{
+    display: none;
 }
