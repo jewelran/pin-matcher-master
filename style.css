@@ -118,10 +118,20 @@ color: #E0B612;
 }
 .fabicon1{
     font-size: 20px;
-    color: green;
+    color: white;
     font-style: italic;
     margin-left: 10px;
 }
 #incurretNotify,#curretNotify{
     display: none;
+}
+#container{
+    display: none;
+
+}
+#container h3{
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20%;
 }

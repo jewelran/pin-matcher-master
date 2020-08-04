@@ -10,7 +10,7 @@
     <script src="pingenerator.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div id="fullContainer" class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator  half-width">
@@ -57,6 +57,9 @@
             <p id="notyfication"></p>
         </div>
     </div>
+    <div id="container">
+        <h3>welcome to our site</h3>
+    </div>
     <script>
 
         // random numbar area--------------------------
@@ -88,14 +91,12 @@
             var generateNumber = document.getElementById("pinInputShow").value;
             if (randomNum == generateNumber) {
                  document.getElementById("curretNotify").style.display  = "block"
-                 document.getElementById("curretNotify").style.backgroundColor  = "#191966"
+                 document.getElementById("curretNotify").style.backgroundColor  = "green"
                  document.getElementById("curretNotify").style.fontSize  = "15px"
-                 document.getElementById("curretNotify").style.color  = "green"
+                 document.getElementById("curretNotify").style.color  = "white"
 
                  var randomNum = document.getElementById("randomPinInput").value= ""
                 var generateNumber = document.getElementById("pinInputShow").value ="";
-
-             
                
             }else{
                 document.getElementById("incurretNotify").style.display  = "block"
@@ -107,9 +108,7 @@
             }
             
          })
-  
-         
-
+   
     </script>
 
 </body>
