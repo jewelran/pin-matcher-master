@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="pingenerator.js"></script>
 </head>
 <body>
     <div class="container">
@@ -43,7 +44,7 @@
                                 <div onclick="clean()" class="button">C</div>
                             </div>
                             <div>
-                                <button type="submit" class="submit-btn">Submit</button>
+                                <button onclick="submit()"  type="submit" id="submit" class="submit-btn">Submit</button>
                                 <p class="action-left">3 try left</p>
                             </div>
                     </div>
@@ -51,11 +52,13 @@
             </div>
         </div>
         <div class="notify-section">
-            <p class="notify"><i class="fa fa-times fabicon" aria-hidden="true"></i> Pin Didn't Match, Please try again</p>
-            <p class="notify"><i class="fa fa-check fabicon1" aria-hidden="true"></i> Pin Matched... Secret door is opening for you</p>
+            <p id="incurretNotify" class="notify"><i class="fa fa-times fabicon" aria-hidden="true"></i> Pin Didn't Match, Please try again</p>
+            <p  id="curretNotify" class="notify"><i class="fa fa-check fabicon1" aria-hidden="true"></i> Pin Matched... Secret door is opening for you</p>
+            <p id="notyfication"></p>
         </div>
     </div>
     <script>
+
         // random numbar area--------------------------
        document.getElementById("generatorPin").addEventListener('click', function(){
            var pinview = document.getElementById('randomPinInput');
@@ -67,16 +70,46 @@
     // generate submit area-----------------------------------
        function  getInput(num){
            document.getElementById("pinInputShow").value +=num 
-
        };
+
        function clean(){
         document.getElementById("pinInputShow").value ="";
-
        };
+
        function back(){
            const backNumber = document.getElementById("pinInputShow").value;
            document.getElementById("pinInputShow").value = backNumber.substring(0, backNumber.length -1)
        };
+
+       // match pin to pin ...........area...............
+  
+    document.getElementById("submit").addEventListener('click',function(){
+            var randomNum = document.getElementById("randomPinInput").value;
+            var generateNumber = document.getElementById("pinInputShow").value;
+            if (randomNum == generateNumber) {
+                 document.getElementById("curretNotify").style.display  = "block"
+                 document.getElementById("curretNotify").style.backgroundColor  = "#191966"
+                 document.getElementById("curretNotify").style.fontSize  = "15px"
+                 document.getElementById("curretNotify").style.color  = "green"
+
+                 var randomNum = document.getElementById("randomPinInput").value= ""
+                var generateNumber = document.getElementById("pinInputShow").value ="";
+
+             
+               
+            }else{
+                document.getElementById("incurretNotify").style.display  = "block"
+                document.getElementById("incurretNotify").style.color  = "red"
+                document.getElementById("incurretNotify").style.backgroundColor  = "#141452"
+                
+                var randomNum = document.getElementById("randomPinInput").value= ""
+                var generateNumber = document.getElementById("pinInputShow").value ="";
+            }
+            
+         })
+  
+         
+
     </script>
 
 </body>
