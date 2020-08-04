@@ -60,7 +60,7 @@
    
     <script>
 
-        // random numbar area--------------------------
+        // random numbar generator  area--------------------------
        document.getElementById("generatorPin").addEventListener('click', function(){
            var pinview = document.getElementById('randomPinInput');
            var pinNumber =(1000 + Math.random(pinview)* 9000)  ;
@@ -68,7 +68,7 @@
            pinview.value = fixedNum;
           document.getElementById('randomPinInput').innerText = pinNumber;
        });
-    // generate submit area-----------------------------------
+    // generate submit number area-----------------------------------
        function  getInput(num){
            document.getElementById("pinInputShow").value +=num 
        };
@@ -78,8 +78,8 @@
        };
 
        function back(){
-           const backNumber = document.getElementById("pinInputShow").value;
-           document.getElementById("pinInputShow").value = backNumber.substring(0, backNumber.length -1)
+           const numberBack = document.getElementById("pinInputShow").value;
+           document.getElementById("pinInputShow").value = numberBack.substring(0, numberBack.length -1)
        };
 
        // match pin to pin ...........area...............
