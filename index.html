@@ -45,7 +45,7 @@
                             </div>
                             <div>
                                 <button onclick="submit()"  type="submit" id="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <p id="warning" class="action-left"> 3 try left</p>
                             </div>
                     </div>
                 </div>
@@ -87,12 +87,15 @@
              document.getElementById("submit").addEventListener('click',function(){
                 var randomNum = document.getElementById("randomPinInput").value;
                 var generateNumber = document.getElementById("pinInputShow").value;
+                var warningText = document.getElementById("warning").innerText;
             if (randomNum == generateNumber) {
                 //for style---------------
                  document.getElementById("correctNotify").style.display  = "block"
                  document.getElementById("correctNotify").style.backgroundColor  = "green"
                  document.getElementById("correctNotify").style.fontSize  = "15px"
                  document.getElementById("correctNotify").style.color  = "white"
+                document.getElementById("warning").style.color  = "blue"
+
                 //empty  string --------------
                  var randomNum = document.getElementById("randomPinInput").value= ""
                 var generateNumber = document.getElementById("pinInputShow").value ="";
@@ -105,6 +108,9 @@
                 document.getElementById("incorrectNotify").style.display  = "block"
                 document.getElementById("incorrectNotify").style.color  = "red"
                 document.getElementById("incorrectNotify").style.backgroundColor  = "#141452"
+
+                document.getElementById("warning").style.color  = "red"
+
                 //for empty string-----------
                 var randomNum = document.getElementById("randomPinInput").value= ""
                 var generateNumber = document.getElementById("pinInputShow").value ="";
@@ -115,6 +121,9 @@
             
          });
   // end of pin  match...area--------------- 
+
+
+
     </script>
                                     <!-------THE END------->
 </body>
